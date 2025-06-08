@@ -14,7 +14,7 @@ public class Program {
         list.add(new Product("Keyboard", 500.00));
         list.add(new Product("Mousepad", 80.00));
 
-        list.removeIf(Product::staticProductPredicate);
+        list.removeIf(Product::nonStaticProductPredicate);
 
         for (Product prod : list) {
             System.out.println(prod);
