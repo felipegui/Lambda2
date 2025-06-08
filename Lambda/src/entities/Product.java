@@ -1,7 +1,6 @@
 package entities;
 
 public class Product {
-
     private String name;
     private Double price;
 
@@ -26,7 +25,10 @@ public class Product {
         this.price = price;
     }
 
-    @Override
+    public static boolean staticProductPredicate(Product prod) {
+        return prod.getPrice() >= 100.00;
+    }
+
     public String toString() {
         return name + ", " + price;
     }
