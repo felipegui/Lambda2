@@ -25,15 +25,7 @@ public class Product {
         this.price = price;
     }
 
-    public static boolean staticProductPredicate(Product prod) {
-        return prod.getPrice() >= 100.00;
-    }
-
-    public boolean nonStaticProductPredicate() {
-        return price >= 100.00;
-    }
-
     public String toString() {
-        return name + ", " + price;
+        return name + ", " + String.format("%.2f", price);
     }
 }
